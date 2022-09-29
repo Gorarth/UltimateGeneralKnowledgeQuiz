@@ -24,6 +24,8 @@ Ultimate General Knowledge Quiz is an online website, focused on using JavaScrip
 
 ## Wireframes
 
-- below is a picture of my wireframes for the quiz.
+- Below is a picture of my wireframes for the quiz.
+- Below that is also the wireframes for the mobile version 
 
 ![Wireframes images](assets/images/Wireframes%20for%20quiz.png)
+![wireframes image for mobile](assets/images/Wireframes%20for%20quiz%20mobile.png)

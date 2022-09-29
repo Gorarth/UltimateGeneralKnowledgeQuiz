@@ -20,7 +20,7 @@ generalKnowledge.addEventListener('click', startGeneralKnowledge);
 sports.addEventListener('click', startSport);
 history.addEventListener('click', startHistory);
 
-let QUESTION = []
+var QUESTION = [];
 async function getQuestionFromAPI() {
     url = 'https://the-trivia-api.com/api/questions';
     let response = await fetch(url);
@@ -32,7 +32,7 @@ async function getQuestionFromAPI() {
 }
 
 QUESTION.forEach (ques => {
-    console.log(ques['question'], ['correctAnswer']);
+    console.log(ques['question'], ['correctAnswer'])
     })
 
 function startGeneralKnowledge () {
