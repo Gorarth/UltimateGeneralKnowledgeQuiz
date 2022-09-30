@@ -32,7 +32,7 @@ async function getQuestionFromAPI() {
 
 function renderNewQuestion() {
     availableQuestions.forEach (ques => {
-        console.log(ques['question'], ques['incorrectAnswers'], ['correctAnswer']);
+        console.log(ques['question'], ques['incorrectAnswers'], ques['correctAnswer']);
     })
 }
 
@@ -43,10 +43,20 @@ async function startGeneralKnowledge () {
     questionCounter = 0;
     await getQuestionFromAPI();
     renderNewQuestion();
+    showQuestion()
+}
+
+function showQuestion () {
+    questionText.innerText = availableQuestions[0].question
+    const answers = availableQuestions[0].incorrectAnswers.concat(availableQuestions[0].correctAnswer)
+    function shuffle () {
+        answers.sort(() => Math.random() - 0.5);
+      }
+      shuffle ()
 }
 
 function getNewQuestion () {
-    questionCounter++;
+    availableQuestions++;
 
 }
 
