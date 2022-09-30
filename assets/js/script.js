@@ -20,28 +20,29 @@ generalKnowledge.addEventListener('click', startGeneralKnowledge);
 sports.addEventListener('click', startSport);
 history.addEventListener('click', startHistory);
 
-var QUESTION = [];
 async function getQuestionFromAPI() {
     url = 'https://the-trivia-api.com/api/questions';
     let response = await fetch(url);
     if (response.ok) {
-      QUESTION = await response.json();
+      availableQuestions = await response.json();
     } else {
       alert("HTTP-Error: " + response.status);
     }
 }
 
-QUESTION.forEach (ques => {
-    console.log(ques['question'], ['correctAnswer'])
+function renderNewQuestion() {
+    availableQuestions.forEach (ques => {
+        console.log(ques['question'], ques['incorrectAnswers'], ['correctAnswer']);
     })
+}
 
-function startGeneralKnowledge () {
+async function startGeneralKnowledge () {
     mainPage.classList.add('hide')
     questionArea.classList.remove('hide')
     score = 0;
     questionCounter = 0;
-    availableQuestions = [...questions]
-    getNewQuestion();
+    await getQuestionFromAPI();
+    renderNewQuestion();
 }
 
 function getNewQuestion () {
