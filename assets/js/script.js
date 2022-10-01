@@ -9,7 +9,10 @@ const questionText = document.getElementById('question-text');
 const answerButtons = document.getElementById('answer-buttons');
 const scoreText = document.getElementById('score');
 const endScreen = document.getElementById('end-screen');
-
+const choice1 = document.getElementById('choice1')
+const choice2 = document.getElementById('choice2')
+const choice3 = document.getElementById('choice3')
+const choice4 = document.getElementById('choice4')
 
 let currentQuestion = {};
 let score = 0;
@@ -56,10 +59,15 @@ function showQuestion () {
       };
 
     shuffledAnswers ();
+    
+    function displayAnswers () {
+    choice1.innerText = answers[0]
+    choice2.innerText = answers[1]
+    choice3.innerText = answers[2]
+    choice4.innerText = answers[3]
+    }
+    displayAnswers ()
 
-    answers.forEach(answer => {
-        const button = document.createElement('button')
-    })
 }
 
 function getNewQuestion () {
