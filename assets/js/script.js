@@ -68,6 +68,8 @@ function showQuestion () {
     }
     displayAnswers ()
 
+    
+
 }
 
 function getNewQuestion () {
