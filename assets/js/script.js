@@ -47,12 +47,19 @@ async function startGeneralKnowledge () {
 }
 
 function showQuestion () {
-    questionText.innerText = availableQuestions[0].question
-    const answers = availableQuestions[0].incorrectAnswers.concat(availableQuestions[0].correctAnswer)
-    function shuffle () {
+    questionText.innerText = availableQuestions[0].question;
+
+    const answers = availableQuestions[0].incorrectAnswers.concat(availableQuestions[0].correctAnswer);
+
+    function shuffledAnswers () {
         answers.sort(() => Math.random() - 0.5);
-      }
-      shuffle ()
+      };
+
+    shuffledAnswers ();
+
+    answers.forEach(answer => {
+        const button = document.createElement('button')
+    })
 }
 
 function getNewQuestion () {
