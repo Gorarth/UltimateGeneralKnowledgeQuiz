@@ -7,7 +7,7 @@ const questionArea = document.getElementById('question-area');
 const questionCategory = document.getElementById('question-category');
 const questionText = document.getElementById('question-text');
 const answerButtons = document.getElementById('answer-buttons');
-const scoreText = document.getElementById('score-text');
+let scoreText = document.getElementById('score-text');
 const endScreen = document.getElementById('end-screen');
 const choice1 = document.getElementById('choice1')
 const choice2 = document.getElementById('choice2')
@@ -15,7 +15,6 @@ const choice3 = document.getElementById('choice3')
 const choice4 = document.getElementById('choice4')
 
 let currentQuestion = {};
-score = 0;
 let questionCounter = 0;
 let availableQuestions = []
 
@@ -47,6 +46,8 @@ async function startGeneralKnowledge () {
     showQuestion()
 }
 
+score = 0;
+
 function showQuestion () {
     questionText.innerText = availableQuestions[0].question;
     const answers = availableQuestions[0].incorrectAnswers.concat(availableQuestions[0].correctAnswer);
@@ -67,26 +68,30 @@ function showQuestion () {
     displayAnswers ()
 
     choice1.onclick = () => {
-        if (answers[0] === availableQuestions[0].correctAnswer)
+        if (answers[0] === availableQuestions[0].correctAnswer) {
         increamentScore ()
+    }
         getNewQuestion ()
     }
     
     choice2.onclick = () => {
-        if (answers[1] === availableQuestions[0].correctAnswer)
-        increamentScore ()
+        if (answers[1] === availableQuestions[0].correctAnswer) {
+        increamentScore () 
+        }
         getNewQuestion ()
     }
     
     choice3.onclick = () => {
-        if (answers[2] === availableQuestions[0].correctAnswer)
-        increamentScore ()
+        if (answers[2] === availableQuestions[0].correctAnswer) {
+        increamentScore () 
+    }
         getNewQuestion ()
     }
     
     choice4.onclick = () => {
-        if (answers[3] === availableQuestions[0].correctAnswer)
+        if (answers[3] === availableQuestions[0].correctAnswer) {
         increamentScore ()
+    }
         getNewQuestion ()
     }
 
@@ -98,6 +103,7 @@ function showQuestion () {
     function increamentScore () {
         scoreText++  
     }
+    
 }
 
 
