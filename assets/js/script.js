@@ -9,17 +9,18 @@ const questionText = document.getElementById('question-text');
 const answerButtons = document.getElementById('answer-buttons');
 let scoreText = document.getElementById('score-text');
 const endScreen = document.getElementById('end-screen');
-const choice1 = document.getElementById('choice1')
-const choice2 = document.getElementById('choice2')
-const choice3 = document.getElementById('choice3')
-const choice4 = document.getElementById('choice4')
+const choice1 = document.getElementById('choice1');
+const choice2 = document.getElementById('choice2');
+const choice3 = document.getElementById('choice3');
+const choice4 = document.getElementById('choice4');
 
 let currentQuestion = {};
 let questionCounter = 0;
-let availableQuestions = []
+let availableQuestions = [];
 
 generalKnowledge.addEventListener('click', startGeneralKnowledge);
-history.addEventListener('click', startHistory)
+history.addEventListener('click', startHistory);
+sports.addEventListener('click', startSports);
 
 async function getQuestionFromAPI() {
     url = 'https://the-trivia-api.com/api/questions';
@@ -33,6 +34,16 @@ async function getQuestionFromAPI() {
 
 async function getQuestionFromAPIHistory() {
     url = 'https://the-trivia-api.com/api/questions?categories=history&limit=10&difficulty=easy';
+    let response = await fetch(url);
+    if (response.ok) {
+      availableQuestions = await response.json();
+    } else {
+      alert("HTTP-Error: " + response.status);
+    }
+}
+
+async function getQuestionFromAPISports() {
+    url = 'https://the-trivia-api.com/api/questions?categories=sport_and_leisure&limit=10&difficulty=medium';
     let response = await fetch(url);
     if (response.ok) {
       availableQuestions = await response.json();
@@ -63,6 +74,16 @@ async function startHistory () {
     scoreText.innerText = score
     questionCounter = 0;
     await getQuestionFromAPIHistory();
+    renderNewQuestion();
+    showQuestion()
+}
+
+async function startSports () {
+    mainPage.classList.add('hide')
+    questionArea.classList.remove('hide')
+    scoreText.innerText = score
+    questionCounter = 0;
+    await getQuestionFromAPISports();
     renderNewQuestion();
     showQuestion()
 }
