@@ -29,3 +29,6 @@ Ultimate General Knowledge Quiz is an online website, focused on using JavaScrip
 
 ![Wireframes images](assets/images/Wireframes%20for%20quiz.png)
 ![wireframes image for mobile](assets/images/Wireframes%20for%20quiz%20mobile.png)
+
+
+images = pxhere

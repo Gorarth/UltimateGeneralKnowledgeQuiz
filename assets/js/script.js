@@ -13,11 +13,11 @@ const choice2 = document.getElementById('choice2');
 const choice3 = document.getElementById('choice3');
 const choice4 = document.getElementById('choice4');
 const foodAndDrink = document.getElementById('food-and-drink');
-const questionCategoryEndScreen = document.getElementById('question-category-end-screen')
-const restart = document.getElementById('restart')
+const questionCategoryEndScreen = document.getElementById('question-category-end-screen');
+const restart = document.getElementById('restart');
 
-let scoreText = document.getElementById('score-text')
-let scoreTextEndScreen = document.getElementById('score-text-end-screen')
+let scoreText = document.getElementById('score-text');
+let scoreTextEndScreen = document.getElementById('score-text-end-screen');
 let currentQuestion = {};
 let questionCounter = 0;
 let availableQuestions = [];
@@ -25,8 +25,8 @@ let availableQuestions = [];
 generalKnowledge.addEventListener('click', startGeneralKnowledge);
 history.addEventListener('click', startHistory);
 sports.addEventListener('click', startSports);
-foodAndDrink.addEventListener('click', startFoodAndDrink)
-restart.addEventListener('click', restartGame)
+foodAndDrink.addEventListener('click', startFoodAndDrink);
+restart.addEventListener('click', restartGame);
 
 async function getQuestionFromAPI() {
     url = 'https://the-trivia-api.com/api/questions';
@@ -76,51 +76,58 @@ function renderNewQuestion() {
 }
 
 async function startGeneralKnowledge () {
-    questionCategory.innerText = "General Knowledge"
-    questionCategoryEndScreen.innerText = "General Knowledge"
-    mainPage.classList.add('hide')
-    questionArea.classList.remove('hide')
-    scoreText.innerText = score
+    questionCategory.innerText = "General Knowledge";
+    questionCategoryEndScreen.innerText = "General Knowledge";
+    mainPage.classList.add('hide');
+    questionArea.classList.remove('hide');
+    scoreText.innerText = score;
     questionCounter = 0;
     await getQuestionFromAPI();
     renderNewQuestion();
-    showQuestion()
+    showQuestion();
+
+    function changeBackgroundImageGeneralKnowledge() {
+        document.body.style.backgroundImage="url(../images/generalknowledge.webp)";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundSize = "cover";
+    }
+    changeBackgroundImageGeneralKnowledge ();
 }
 
 async function startHistory () {
-    questionCategory.innerText = "History"
-    questionCategoryEndScreen.innerText = "History"
-    mainPage.classList.add('hide')
-    questionArea.classList.remove('hide')
-    scoreText.innerText = score
+    questionCategory.innerText = "History";
+    questionCategoryEndScreen.innerText = "History";
+    mainPage.classList.add('hide');
+    questionArea.classList.remove('hide');
+    scoreText.innerText = score;
     questionCounter = 0;
     await getQuestionFromAPIHistory();
     renderNewQuestion();
-    showQuestion()
+    showQuestion();
 }
 
 async function startSports () {
-    questionCategory.innerText = "Sports"
-    questionCategoryEndScreen.innerText = "Sports"
-    mainPage.classList.add('hide')
-    questionArea.classList.remove('hide')
-    scoreText.innerText = score
+    questionCategory.innerText = "Sports";
+    questionCategoryEndScreen.innerText = "Sports";
+    mainPage.classList.add('hide');
+    questionArea.classList.remove('hide');
+    scoreText.innerText = score;
     questionCounter = 0;
     await getQuestionFromAPISports();
     renderNewQuestion();
-    showQuestion()
+    showQuestion();
 }
 
 async function startFoodAndDrink () {
-    questionCategory.innerText = "Food & Drink"
-    questionCategoryEndScreen.innerText = "Food & Drink"
-    mainPage.classList.add('hide')
-    questionArea.classList.remove('hide')
-    scoreText.innerText = score
+    questionCategory.innerText = "Food & Drink";
+    questionCategoryEndScreen.innerText = "Food & Drink";
+    mainPage.classList.add('hide');
+    questionArea.classList.remove('hide');
+    scoreText.innerText = score;
     questionCounter = 0;
     await getQuestionFromAPIFoodAndDrink();
     renderNewQuestion();
-    showQuestion()
+    showQuestion();
 }
 
 score = 0;
@@ -137,10 +144,10 @@ function showQuestion () {
     shuffledAnswers ();
 
     function displayAnswers () {
-        choice1.innerText = answers[0]
-        choice2.innerText = answers[1]
-        choice3.innerText = answers[2]
-        choice4.innerText = answers[3]
+        choice1.innerText = answers[0];
+        choice2.innerText = answers[1];
+        choice3.innerText = answers[2];
+        choice4.innerText = answers[3];
         }
 
     displayAnswers ()
@@ -148,74 +155,74 @@ function showQuestion () {
     choice1.onclick = (e) => {
         e.preventDefault();
         if (answers[0] === availableQuestions[questionCounter].correctAnswer) {
-        increamentScore ()
+        increamentScore ();
     } 
         if (availableQuestions.length > questionCounter + 1 ) {
-        getNewQuestion () 
+        getNewQuestion () ;
             } else {
-            showEndScreen ()
+            showEndScreen ();
             }
     }
     
     choice2.onclick = (e) => {
         e.preventDefault();
         if (answers[1] === availableQuestions[questionCounter].correctAnswer) {
-        increamentScore () 
+        increamentScore () ;
         }
         if (availableQuestions.length > questionCounter + 1 ) {
-            getNewQuestion () 
+            getNewQuestion () ;
             } else {
-                showEndScreen ()
+                showEndScreen ();
             }
     }
     
     choice3.onclick = (e) => {
         e.preventDefault();
         if (answers[2] === availableQuestions[questionCounter].correctAnswer) {
-        increamentScore () 
+        increamentScore () ;
     }
         if (availableQuestions.length > questionCounter + 1 ) {
-        getNewQuestion () 
+        getNewQuestion () ;
             } else {
-            showEndScreen ()
+            showEndScreen ();
             }
     }
     
     choice4.onclick = (e) => {
         e.preventDefault();
         if (answers[3] === availableQuestions[questionCounter].correctAnswer) {
-        increamentScore ()
+        increamentScore ();
     }
         if (availableQuestions.length > questionCounter + 1 ) {
-        getNewQuestion () 
+        getNewQuestion () ;
             } else {
-            showEndScreen ()
+            showEndScreen ();
             }
     }
 
     function getNewQuestion () {
         questionCounter++;
-        showQuestion ()
+        showQuestion ();
     }
 
     function increamentScore () {
-        score++  
-        scoreText.innerText = score
+        score++  ;
+        scoreText.innerText = score;
     }
     
     function showEndScreen () {
-        questionArea.classList.add('hide')
-        endScreen.classList.remove('hide')
-        scoreTextEndScreen.innerText = score
+        questionArea.classList.add('hide');
+        endScreen.classList.remove('hide');
+        scoreTextEndScreen.innerText = score;
         
     }
     
 }
 
 function restartGame () {
-    mainPage.classList.remove('hide')
-    endScreen.classList.add('hide')
-    score = 0
+    mainPage.classList.remove('hide');
+    endScreen.classList.add('hide');
+    score = 0;
 }
 
 

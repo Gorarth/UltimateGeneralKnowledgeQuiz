@@ -10,7 +10,11 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Indie Flower', cursive;
+    background-image: url('../images/quiz.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 
 .game-area {
     width:800px;
@@ -19,6 +23,7 @@ body {
     padding: 10px;
     box-shadow: 0 0 10px 2px;
     background-color: aliceblue;
+    
 }
 
 .button-grid {
