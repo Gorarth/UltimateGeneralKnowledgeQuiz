@@ -21,7 +21,7 @@ body {
     background-color: aliceblue;
 }
 
-.answer-buttons {
+.button-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 10px;

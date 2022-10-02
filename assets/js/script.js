@@ -13,6 +13,7 @@ const choice1 = document.getElementById('choice1');
 const choice2 = document.getElementById('choice2');
 const choice3 = document.getElementById('choice3');
 const choice4 = document.getElementById('choice4');
+const foodAndDrink = document.getElementById('food-and-drink')
 
 let currentQuestion = {};
 let questionCounter = 0;
@@ -21,6 +22,7 @@ let availableQuestions = [];
 generalKnowledge.addEventListener('click', startGeneralKnowledge);
 history.addEventListener('click', startHistory);
 sports.addEventListener('click', startSports);
+foodAndDrink.addEventListener('click', startFoodAndDrink)
 
 async function getQuestionFromAPI() {
     url = 'https://the-trivia-api.com/api/questions';
@@ -51,6 +53,17 @@ async function getQuestionFromAPISports() {
       alert("HTTP-Error: " + response.status);
     }
 }
+
+async function getQuestionFromAPIFoodAndDrink() {
+    url = 'https://the-trivia-api.com/api/questions?categories=food_and_drink&limit=10&difficulty=medium';
+    let response = await fetch(url);
+    if (response.ok) {
+      availableQuestions = await response.json();
+    } else {
+      alert("HTTP-Error: " + response.status);
+    }
+}
+
 
 function renderNewQuestion() {
     availableQuestions.forEach (ques => {
@@ -87,6 +100,17 @@ async function startSports () {
     scoreText.innerText = score
     questionCounter = 0;
     await getQuestionFromAPISports();
+    renderNewQuestion();
+    showQuestion()
+}
+
+async function startFoodAndDrink () {
+    questionCategory.innerText = "Food & Drink"
+    mainPage.classList.add('hide')
+    questionArea.classList.remove('hide')
+    scoreText.innerText = score
+    questionCounter = 0;
+    await getQuestionFromAPIFoodAndDrink();
     renderNewQuestion();
     showQuestion()
 }
