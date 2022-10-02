@@ -49,8 +49,8 @@ async function startGeneralKnowledge () {
 score = 0;
 
 function showQuestion () {
-    questionText.innerText = availableQuestions[0].question;
-    const answers = availableQuestions[0].incorrectAnswers.concat(availableQuestions[0].correctAnswer);
+    questionText.innerText = availableQuestions[questionCounter].question;
+    const answers = availableQuestions[questionCounter].incorrectAnswers.concat(availableQuestions[questionCounter].correctAnswer);
 
     function shuffledAnswers () {
         answers.sort(() => Math.random() - 0.5);
@@ -67,28 +67,32 @@ function showQuestion () {
 
     displayAnswers ()
 
-    choice1.onclick = () => {
+    choice1.onclick = (e) => {
+        e.preventDefault();
         if (answers[0] === availableQuestions[0].correctAnswer) {
         increamentScore ()
     }
         getNewQuestion ()
     }
     
-    choice2.onclick = () => {
+    choice2.onclick = (e) => {
+        e.preventDefault();
         if (answers[1] === availableQuestions[0].correctAnswer) {
         increamentScore () 
         }
         getNewQuestion ()
     }
     
-    choice3.onclick = () => {
+    choice3.onclick = (e) => {
+        e.preventDefault();
         if (answers[2] === availableQuestions[0].correctAnswer) {
         increamentScore () 
     }
         getNewQuestion ()
     }
     
-    choice4.onclick = () => {
+    choice4.onclick = (e) => {
+        e.preventDefault();
         if (answers[3] === availableQuestions[0].correctAnswer) {
         increamentScore ()
     }
@@ -96,7 +100,7 @@ function showQuestion () {
     }
 
     function getNewQuestion () {
-        availableQuestions++;
+        questionCounter++;
         showQuestion ()
     }
 
