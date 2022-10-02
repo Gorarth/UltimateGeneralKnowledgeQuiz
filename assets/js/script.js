@@ -113,8 +113,12 @@ function showQuestion () {
         e.preventDefault();
         if (answers[0] === availableQuestions[questionCounter].correctAnswer) {
         increamentScore ()
-    }
-        getNewQuestion ()
+    } 
+        if (availableQuestions.length > questionCounter + 1 ) {
+        getNewQuestion () 
+        } else {
+            endScreen ()
+        }
     }
     
     choice2.onclick = (e) => {
@@ -122,7 +126,11 @@ function showQuestion () {
         if (answers[1] === availableQuestions[questionCounter].correctAnswer) {
         increamentScore () 
         }
-        getNewQuestion ()
+        if (availableQuestions.length > questionCounter + 1 ) {
+            getNewQuestion () 
+            } else {
+                endScreen ()
+            }
     }
     
     choice3.onclick = (e) => {
@@ -130,7 +138,11 @@ function showQuestion () {
         if (answers[2] === availableQuestions[questionCounter].correctAnswer) {
         increamentScore () 
     }
-        getNewQuestion ()
+        if (availableQuestions.length > questionCounter + 1 ) {
+        getNewQuestion () 
+        } else {
+            endScreen ()
+        }
     }
     
     choice4.onclick = (e) => {
@@ -138,7 +150,11 @@ function showQuestion () {
         if (answers[3] === availableQuestions[questionCounter].correctAnswer) {
         increamentScore ()
     }
-        getNewQuestion ()
+        if (availableQuestions.length > questionCounter + 1 ) {
+        getNewQuestion () 
+        } else {
+            endScreen ()
+        }
     }
 
     function getNewQuestion () {
@@ -151,8 +167,11 @@ function showQuestion () {
         scoreText.innerText = score
     }
     
+    function endScreen () {
+        questionArea.classList.add('hide')
+    }
+    
 }
-
 
 
 
