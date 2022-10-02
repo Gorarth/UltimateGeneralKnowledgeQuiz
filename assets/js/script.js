@@ -59,6 +59,7 @@ function renderNewQuestion() {
 }
 
 async function startGeneralKnowledge () {
+    questionCategory.innerText = "General Knowledge"
     mainPage.classList.add('hide')
     questionArea.classList.remove('hide')
     scoreText.innerText = score
@@ -69,6 +70,7 @@ async function startGeneralKnowledge () {
 }
 
 async function startHistory () {
+    questionCategory.innerText = "History"
     mainPage.classList.add('hide')
     questionArea.classList.remove('hide')
     scoreText.innerText = score
@@ -79,6 +81,7 @@ async function startHistory () {
 }
 
 async function startSports () {
+    questionCategory.innerText = "Sports"
     mainPage.classList.add('hide')
     questionArea.classList.remove('hide')
     scoreText.innerText = score

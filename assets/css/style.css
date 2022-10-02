@@ -34,7 +34,8 @@ body {
     border-color: black;
     border-radius: 5px;
     padding: 8px 12px;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: bold;
     font-family: 'Indie Flower', cursive;
 
 }
@@ -64,6 +65,7 @@ body {
 .questions, .details {
     font-size: 22px;
     font-weight: bold;
+    padding: 15px;
 }
 
 .score {
@@ -71,4 +73,9 @@ body {
     padding: 0;
     margin: 0;
     font-size:16px;
+}
+
+.question-category {
+    font-size:22px;
+
 }
