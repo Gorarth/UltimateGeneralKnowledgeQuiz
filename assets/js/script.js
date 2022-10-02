@@ -19,9 +19,20 @@ let questionCounter = 0;
 let availableQuestions = []
 
 generalKnowledge.addEventListener('click', startGeneralKnowledge);
+history.addEventListener('click', startHistory)
 
 async function getQuestionFromAPI() {
     url = 'https://the-trivia-api.com/api/questions';
+    let response = await fetch(url);
+    if (response.ok) {
+      availableQuestions = await response.json();
+    } else {
+      alert("HTTP-Error: " + response.status);
+    }
+}
+
+async function getQuestionFromAPIHistory() {
+    url = 'https://the-trivia-api.com/api/questions?categories=history&limit=10&difficulty=easy';
     let response = await fetch(url);
     if (response.ok) {
       availableQuestions = await response.json();
@@ -42,6 +53,16 @@ async function startGeneralKnowledge () {
     scoreText.innerText = score
     questionCounter = 0;
     await getQuestionFromAPI();
+    renderNewQuestion();
+    showQuestion()
+}
+
+async function startHistory () {
+    mainPage.classList.add('hide')
+    questionArea.classList.remove('hide')
+    scoreText.innerText = score
+    questionCounter = 0;
+    await getQuestionFromAPIHistory();
     renderNewQuestion();
     showQuestion()
 }
