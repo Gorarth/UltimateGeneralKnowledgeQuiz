@@ -7,14 +7,17 @@ const questionArea = document.getElementById('question-area');
 const questionCategory = document.getElementById('question-category');
 const questionText = document.getElementById('question-text');
 const answerButtons = document.getElementById('answer-buttons');
-let scoreText = document.getElementById('score-text');
 const endScreen = document.getElementById('end-screen');
 const choice1 = document.getElementById('choice1');
 const choice2 = document.getElementById('choice2');
 const choice3 = document.getElementById('choice3');
 const choice4 = document.getElementById('choice4');
-const foodAndDrink = document.getElementById('food-and-drink')
+const foodAndDrink = document.getElementById('food-and-drink');
+const questionCategoryEndScreen = document.getElementById('question-category-end-screen')
+const restart = document.getElementById('restart')
 
+let scoreText = document.getElementById('score-text')
+let scoreTextEndScreen = document.getElementById('score-text-end-screen')
 let currentQuestion = {};
 let questionCounter = 0;
 let availableQuestions = [];
@@ -23,6 +26,7 @@ generalKnowledge.addEventListener('click', startGeneralKnowledge);
 history.addEventListener('click', startHistory);
 sports.addEventListener('click', startSports);
 foodAndDrink.addEventListener('click', startFoodAndDrink)
+restart.addEventListener('click', restartGame)
 
 async function getQuestionFromAPI() {
     url = 'https://the-trivia-api.com/api/questions';
@@ -73,6 +77,7 @@ function renderNewQuestion() {
 
 async function startGeneralKnowledge () {
     questionCategory.innerText = "General Knowledge"
+    questionCategoryEndScreen.innerText = "General Knowledge"
     mainPage.classList.add('hide')
     questionArea.classList.remove('hide')
     scoreText.innerText = score
@@ -117,6 +122,7 @@ async function startFoodAndDrink () {
 
 score = 0;
 
+
 function showQuestion () {
     questionText.innerText = availableQuestions[questionCounter].question;
     const answers = availableQuestions[questionCounter].incorrectAnswers.concat(availableQuestions[questionCounter].correctAnswer);
@@ -143,9 +149,9 @@ function showQuestion () {
     } 
         if (availableQuestions.length > questionCounter + 1 ) {
         getNewQuestion () 
-        } else {
-            endScreen ()
-        }
+            } else {
+            showEndScreen ()
+            }
     }
     
     choice2.onclick = (e) => {
@@ -156,7 +162,7 @@ function showQuestion () {
         if (availableQuestions.length > questionCounter + 1 ) {
             getNewQuestion () 
             } else {
-                endScreen ()
+                showEndScreen ()
             }
     }
     
@@ -167,9 +173,9 @@ function showQuestion () {
     }
         if (availableQuestions.length > questionCounter + 1 ) {
         getNewQuestion () 
-        } else {
-            endScreen ()
-        }
+            } else {
+            showEndScreen ()
+            }
     }
     
     choice4.onclick = (e) => {
@@ -179,9 +185,9 @@ function showQuestion () {
     }
         if (availableQuestions.length > questionCounter + 1 ) {
         getNewQuestion () 
-        } else {
-            endScreen ()
-        }
+            } else {
+            showEndScreen ()
+            }
     }
 
     function getNewQuestion () {
@@ -194,13 +200,18 @@ function showQuestion () {
         scoreText.innerText = score
     }
     
-    function endScreen () {
+    function showEndScreen () {
         questionArea.classList.add('hide')
+        endScreen.classList.remove('hide')
+        scoreTextEndScreen.innerText = score
+        
     }
     
 }
 
-
+function restartGame () {
+    
+}
 
 
 

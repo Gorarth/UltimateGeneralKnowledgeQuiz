@@ -79,3 +79,12 @@ body {
     font-size:22px;
 
 }
+
+.end-screen {
+    text-align:center;
+}
+
+.end-screen-important {
+    text-decoration: underline;
+    font-size: 40px;
+}
