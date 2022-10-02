@@ -89,6 +89,7 @@ async function startGeneralKnowledge () {
 
 async function startHistory () {
     questionCategory.innerText = "History"
+    questionCategoryEndScreen.innerText = "History"
     mainPage.classList.add('hide')
     questionArea.classList.remove('hide')
     scoreText.innerText = score
@@ -100,6 +101,7 @@ async function startHistory () {
 
 async function startSports () {
     questionCategory.innerText = "Sports"
+    questionCategoryEndScreen.innerText = "Sports"
     mainPage.classList.add('hide')
     questionArea.classList.remove('hide')
     scoreText.innerText = score
@@ -111,6 +113,7 @@ async function startSports () {
 
 async function startFoodAndDrink () {
     questionCategory.innerText = "Food & Drink"
+    questionCategoryEndScreen.innerText = "Food & Drink"
     mainPage.classList.add('hide')
     questionArea.classList.remove('hide')
     scoreText.innerText = score
@@ -210,7 +213,9 @@ function showQuestion () {
 }
 
 function restartGame () {
-    
+    mainPage.classList.remove('hide')
+    endScreen.classList.add('hide')
+    score = 0
 }
 
 
