@@ -69,7 +69,7 @@ function showQuestion () {
 
     choice1.onclick = (e) => {
         e.preventDefault();
-        if (answers[0] === availableQuestions[0].correctAnswer) {
+        if (answers[0] === availableQuestions[questionCounter].correctAnswer) {
         increamentScore ()
     }
         getNewQuestion ()
@@ -77,7 +77,7 @@ function showQuestion () {
     
     choice2.onclick = (e) => {
         e.preventDefault();
-        if (answers[1] === availableQuestions[0].correctAnswer) {
+        if (answers[1] === availableQuestions[questionCounter].correctAnswer) {
         increamentScore () 
         }
         getNewQuestion ()
@@ -85,7 +85,7 @@ function showQuestion () {
     
     choice3.onclick = (e) => {
         e.preventDefault();
-        if (answers[2] === availableQuestions[0].correctAnswer) {
+        if (answers[2] === availableQuestions[questionCounter].correctAnswer) {
         increamentScore () 
     }
         getNewQuestion ()
@@ -93,7 +93,7 @@ function showQuestion () {
     
     choice4.onclick = (e) => {
         e.preventDefault();
-        if (answers[3] === availableQuestions[0].correctAnswer) {
+        if (answers[3] === availableQuestions[questionCounter].correctAnswer) {
         increamentScore ()
     }
         getNewQuestion ()
@@ -105,7 +105,8 @@ function showQuestion () {
     }
 
     function increamentScore () {
-        scoreText++  
+        score++  
+        scoreText.innerText = score
     }
     
 }
