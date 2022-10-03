@@ -1,8 +1,8 @@
 # Ultimate General Knowledge Quiz
 
-This is a website designed for people to test there general knowledge. It has been made to be responsive and accessible on a range of devices.
+This is a website designed for people to test there general knowledge. It has been made to be responsive and accessible on a range of devices. The site is used by people who would like to test their knowledge within a quiz setting.
 
-![Am i responive image]
+![Am i responsive image](assets/images/am-i-responsive.png)
 
 [View the website here on GitHub Pages](https://gorarth.github.io/UltimateGeneralKnowledgeQuiz/) Right click to open in new page.
 - - - 
@@ -38,6 +38,9 @@ Ultimate General Knowledge Quiz is an online website, focused on using JavaScrip
 
 ### Key Information about the website
 
+- Quiz with multiple categorys to choose from, so users don't have to stick to one theme.
+
+- The questions are taken from an API so the questions will often be very different.
 
 
 ## User Stories
@@ -53,6 +56,13 @@ Ultimate General Knowledge Quiz is an online website, focused on using JavaScrip
 
 ## Design
 
+- All text has been kept as standard black to help with legibility, with the buttons keeping a solid background of white so they text doesn't get lost within the background images.
+
+- The images used change depending on the category and are themed towards that category. for example wine and cheese for food and drink, and a sports venue and crowd for the sports category.
+
+- The background of the game area is Alice white, a slight off white with an opacity of 0.8 to give a transparent feel, so people can see the full background picture, while keeping the play area obvious.
+
+- The font used throughout the whole website is Indie Flower, cursive, and most text is in bold. The font is clean and easy to read while giving the quiz a bit of flare.
 
 [Back to Contents](#contents)
 - - - 
@@ -70,6 +80,9 @@ Ultimate General Knowledge Quiz is an online website, focused on using JavaScrip
 
 ## Tech
 
+- This website features interactive elements and is fully responsive on all devices.
+
+- The Languages used to create this website is HTML5, CSS3 and JavaScript.
 
 ## Additional Programs Used
 
@@ -78,8 +91,6 @@ Ultimate General Knowledge Quiz is an online website, focused on using JavaScrip
 - GitHub to save and store the files for our site.
 
 - Google Fonts used to import the font used within the website.
-
-- Font Awesome to use for icons on the website.
 
 - Google Dev Tools was used to help test and troubleshoot any issues.
 
@@ -98,9 +109,54 @@ Ultimate General Knowledge Quiz is an online website, focused on using JavaScrip
 
 ## Features
 ### Existing Features
-  
+
+1. #### Landing Page
+
+    - As soon as you land on the webpage, it is clear that it is a quiz. The purpose of the site is clear and easily understood from the moment you enter.
+
+    - It is clear to the users that they can pick which category they desire.
+
+![Landing Page](assets/images/Landing-page.png)
+
+2. #### The Quiz/Game area
+
+    - Once a user has clicked on the category they want to play from the landing page. They will be shown a question.
+
+    - It is clear from the 4 options, that clicking on one will submit that answer.
+
+    - The game will cycle through the questions in the same screen once clicked on, saving the user having to click multiple times to submit an answer.
+
+![quiz area](assets/images/quiz-area.png)
+
+3. #### End Screen 
+
+    - Once the game has ended, the end screen will display. Clearly showing the user the category they picked, and the score they received.
+
+    - A restart button will appear with a little bit of detail above, telling them to push said button to go back to the main page and play again, if they wish too.
+
+![end screen](assets/images/end-screen.png)
 
 ### Future Features 
+
+1. #### Highscores
+
+    - I could implement a highscore feature, which could either save to the users device or a global scale. This option could also compare scores among friends if a feature for creating an account was added, see below.
+
+    - Adding in a timer, to see who completes the quiz in the fastest time would be a second way to see who is top dog. Who can get all 10 right the fastest?
+
+2. #### User Accounts
+
+    - Adding in a person user account would add a lot of replay value and other features along side that.
+        
+        - Within this feature, You could add your friends to a friend list, and then compare scores with each other and see who can beat who. 
+
+3. #### Endless mode
+
+    - Could add in a mode, in which after answering 10 questions, you can select a new category and keep your current score. 
+
+        - within this mode, you can have highscores at certain break points, or simple who has the most questions answered. Who can get 100/100 questions right first?
+        
+             
 
 [Back to Contents](#contents)
 - - - 
