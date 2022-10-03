@@ -73,7 +73,7 @@ async function getQuestionFromAPIFoodAndDrink() {
 function renderNewQuestion() {
     availableQuestions.forEach (ques => {
         console.log(ques['question'], ques['incorrectAnswers'], ques['correctAnswer']);
-    })
+    });
 }
 
 async function startGeneralKnowledge () {
@@ -146,7 +146,7 @@ function showQuestion () {
 
     function shuffledAnswers () {
         answers.sort(() => Math.random() - 0.5);
-    };
+    }
 
     shuffledAnswers ();
 
@@ -157,7 +157,7 @@ function showQuestion () {
         choice4.innerText = answers[3];
         }
 
-    displayAnswers ()
+    displayAnswers ();
 
     choice1.onclick = (e) => {
         e.preventDefault();
@@ -169,7 +169,7 @@ function showQuestion () {
             } else {
             showEndScreen ();
             }
-    }
+    };
     
     choice2.onclick = (e) => {
         e.preventDefault();
@@ -181,7 +181,7 @@ function showQuestion () {
             } else {
                 showEndScreen ();
             }
-    }
+    };
     
     choice3.onclick = (e) => {
         e.preventDefault();
@@ -193,7 +193,7 @@ function showQuestion () {
             } else {
             showEndScreen ();
             }
-    }
+    };
     
     choice4.onclick = (e) => {
         e.preventDefault();
@@ -205,7 +205,7 @@ function showQuestion () {
             } else {
             showEndScreen ();
             }
-    }
+    };
 
     function getNewQuestion () {
         questionCounter++;

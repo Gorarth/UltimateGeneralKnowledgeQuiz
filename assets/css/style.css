@@ -8,6 +8,8 @@ body {
     justify-content: center;
 }
 
+/* Classes for background image, changing depending on which category was selected. */
+
 .body-background {
     background-image: url('../images/quiz.webp');
     background-repeat: no-repeat;
@@ -47,6 +49,9 @@ body {
     height: 100vh;
     width: 100vw;
 }
+/* background classes end. */
+
+/* style for the game area and all the buttons used within the page. */
 
 .game-area {
     width:800px;
@@ -90,9 +95,15 @@ body {
     
 }
 
+/* game area and button style ends*/
+
+/* class .hide used to both hide and display areas on the page using JavaScript to add/remove class depending on situation. */
+
 .hide {
     display:none;
 }
+
+/* Text styles. These styles are use to style written the HTML text. */
 
 .quiz-title, .questions, .details {
     text-align: center;
@@ -128,13 +139,16 @@ body {
     text-decoration: underline;
     font-size: 40px;
 }
-/* 
-main button reduce padding */
+
+/* Media styling to effect all devices with a MAX WIDTH of 700px.*/
 
 @media only screen and (max-width: 700px) {
+
+/* Media styling for the game area and buttons used within the page*/
+
     .game-area {
         max-width: 95%;
-        max-height: 70%;
+        max-height: 80%;
     }
 
     .button-grid {
@@ -153,6 +167,8 @@ main button reduce padding */
         padding: 5px 10px;
         margin: 8px;
     }
+
+/* Media styling for written HTML text. */
 
     .end-screen-details {
         font-size: 15px;
