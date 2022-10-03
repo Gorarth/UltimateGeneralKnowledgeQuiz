@@ -168,6 +168,10 @@ body {
         margin-top: 15px;
     }
 
+    .btn:hover {
+        background-color: unset;
+    }
+
 /* Media styling for written HTML text. */
 
     .end-screen-details {
