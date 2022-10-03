@@ -15,6 +15,7 @@ const choice4 = document.getElementById('choice4');
 const foodAndDrink = document.getElementById('food-and-drink');
 const questionCategoryEndScreen = document.getElementById('question-category-end-screen');
 const restart = document.getElementById('restart');
+const backgroundContainer = document.getElementById('background-container')
 
 let scoreText = document.getElementById('score-text');
 let scoreTextEndScreen = document.getElementById('score-text-end-screen');
@@ -76,6 +77,9 @@ function renderNewQuestion() {
 }
 
 async function startGeneralKnowledge () {
+    backgroundContainer.classList.remove('body-background');
+    backgroundContainer.classList.add('body-background-general-knowledge');
+
     questionCategory.innerText = "General Knowledge";
     questionCategoryEndScreen.innerText = "General Knowledge";
     mainPage.classList.add('hide');
@@ -86,15 +90,12 @@ async function startGeneralKnowledge () {
     renderNewQuestion();
     showQuestion();
 
-    function changeBackgroundImageGeneralKnowledge() {
-        document.body.style.backgroundImage="url(../images/generalknowledge.webp)";
-        document.body.style.backgroundRepeat = "no-repeat";
-        document.body.style.backgroundSize = "cover";
-    }
-    changeBackgroundImageGeneralKnowledge ();
 }
 
 async function startHistory () {
+    backgroundContainer.classList.remove('body-background');
+    backgroundContainer.classList.add('body-background-history');
+
     questionCategory.innerText = "History";
     questionCategoryEndScreen.innerText = "History";
     mainPage.classList.add('hide');
@@ -107,6 +108,9 @@ async function startHistory () {
 }
 
 async function startSports () {
+    backgroundContainer.classList.remove('body-background');
+    backgroundContainer.classList.add('body-background-sports');
+
     questionCategory.innerText = "Sports";
     questionCategoryEndScreen.innerText = "Sports";
     mainPage.classList.add('hide');
@@ -119,6 +123,9 @@ async function startSports () {
 }
 
 async function startFoodAndDrink () {
+    backgroundContainer.classList.remove('body-background');
+    backgroundContainer.classList.add('body-background-food-and-drink');
+
     questionCategory.innerText = "Food & Drink";
     questionCategoryEndScreen.innerText = "Food & Drink";
     mainPage.classList.add('hide');
@@ -223,6 +230,11 @@ function restartGame () {
     mainPage.classList.remove('hide');
     endScreen.classList.add('hide');
     score = 0;
+    backgroundContainer.classList.remove('body-background-general-knowledge');
+    backgroundContainer.classList.remove('body-background-history');
+    backgroundContainer.classList.remove('body-background-sports');
+    backgroundContainer.classList.remove('body-background-food-and-drink');
+    backgroundContainer.classList.add('body-background');
 }
 
 
