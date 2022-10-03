@@ -100,7 +100,7 @@ body {
     margin: 0;
 }
 
-.questions, .details {
+.questions, .details, .end-screen-details {
     font-size: 22px;
     font-weight: bold;
     padding: 15px;
@@ -130,3 +130,24 @@ body {
 }
 /* 
 main button reduce padding */
+
+@media only screen and (max-width: 600px) {
+    .game-area {
+        max-width: 90%;
+        max-height: 70%;
+    }
+
+    .button-grid {
+        margin: 10px 0;
+    }
+
+    .btn {
+        font-size: 15px;
+        padding: 4px 6px;
+    }
+    .end-screen-details {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+}
