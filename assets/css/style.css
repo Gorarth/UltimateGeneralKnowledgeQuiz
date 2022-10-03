@@ -1,15 +1,11 @@
 body {
     padding:0;
     margin:0;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background-image: url();
-    background-repeat: no-repeat;
-    background-size: cover;
     font-family: 'Indie Flower', cursive;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
 }
 
 .body-background {
@@ -54,13 +50,13 @@ body {
 
 .game-area {
     width:800px;
-    max-width: 80%;
+    max-width: 70%;
+    max-height: 60%;
     border-radius: 10px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
     background-color: aliceblue;
-    margin-top: 10%;
-    margin-left: 30%;
+    margin-top: 5%;
 }
 
 .button-grid {
@@ -113,8 +109,10 @@ body {
 .score {
     text-align: center;
     padding: 0;
-    margin: 0;
-    font-size:16px;
+    margin-top: 10%;
+    font-size: 16px;
+    font-weight: bold;
+
 }
 
 .question-category {
@@ -130,3 +128,5 @@ body {
     text-decoration: underline;
     font-size: 40px;
 }
+/* 
+main button reduce padding */

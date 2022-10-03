@@ -15,7 +15,7 @@ const choice4 = document.getElementById('choice4');
 const foodAndDrink = document.getElementById('food-and-drink');
 const questionCategoryEndScreen = document.getElementById('question-category-end-screen');
 const restart = document.getElementById('restart');
-const backgroundContainer = document.getElementById('background-container')
+const backgroundContainer = document.getElementById('background-container');
 
 let scoreText = document.getElementById('score-text');
 let scoreTextEndScreen = document.getElementById('score-text-end-screen');
@@ -221,7 +221,7 @@ function showQuestion () {
         questionArea.classList.add('hide');
         endScreen.classList.remove('hide');
         scoreTextEndScreen.innerText = score;
-        
+        document.getElementById("game-area").style.maxHeight = "80%";
     }
     
 }
@@ -235,6 +235,8 @@ function restartGame () {
     backgroundContainer.classList.remove('body-background-sports');
     backgroundContainer.classList.remove('body-background-food-and-drink');
     backgroundContainer.classList.add('body-background');
+    gameArea.classList.remove('hide');
+    document.getElementById("game-area").style.maxHeight = "60%";
 }
 
 
