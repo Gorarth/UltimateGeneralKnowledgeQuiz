@@ -131,23 +131,36 @@ body {
 /* 
 main button reduce padding */
 
-@media only screen and (max-width: 7gi00px) {
+@media only screen and (max-width: 700px) {
     .game-area {
-        max-width: 90%;
+        max-width: 95%;
         max-height: 70%;
     }
 
     .button-grid {
         margin: 10px 0;
+        gap: 4px;
     }
 
     .btn {
         font-size: 15px;
         padding: 4px 6px;
+        border-radius: 2px;
     }
+
+    .main-btn {
+        font-size: 17px;
+        padding: 5px 10px;
+        margin: 8px;
+    }
+
     .end-screen-details {
         font-size: 15px;
         padding: 10px;
+    }
+
+    .end-screen-important {
+        font-size: 25px;
     }
 
 }
