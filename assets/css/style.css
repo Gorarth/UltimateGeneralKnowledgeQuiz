@@ -11,43 +11,31 @@ body {
 /* Classes for background image, changing depending on which category was selected. */
 
 .body-background {
-    background-image: url('../images/quiz.webp');
+    
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     width: 100vw;
+}
+
+.body-background-main {
+    background-image: url('../images/quiz-background.webp');
 }
 
 .body-background-general-knowledge {
     background-image: url('../images/generalknowledge.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
 }
 
 .body-background-sports {
     background-image: url('../images/sports.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
 }
 
 .body-background-history {
     background-image: url('../images/history.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
 }
 
 .body-background-food-and-drink {
     background-image: url('../images/foodanddrink.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
 }
 /* background classes end. */
 
@@ -150,7 +138,7 @@ body {
     width: 100vw;
     display: flex;
     justify-content: center;
-    background-image: url(../images/end-screen.png);
+    background-image: url(../images/error-page-background.webp);
     background-repeat: no-repeat;
     background-size: cover; 
 }

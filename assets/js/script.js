@@ -75,20 +75,12 @@ async function getQuestionFromAPIFoodAndDrink() {
     }
 }
 
-/* ?? */
-
-function renderNewQuestion() {
-    availableQuestions.forEach (ques => {
-        console.log(ques['question'], ques['incorrectAnswers'], ques['correctAnswer']);
-    });
-}
-
 /* async function which reacts with the eventListener depending on which button was pressed. 4 different async functions for each category*/
 
 async function startGeneralKnowledge () {
 
 /* changes the background image */
-    backgroundContainer.classList.remove('body-background');
+    backgroundContainer.classList.remove('body-background-main');
     backgroundContainer.classList.add('body-background-general-knowledge');
 
 /* changes the text in the game area and the end screen depending on the category selected. */
@@ -106,7 +98,6 @@ async function startGeneralKnowledge () {
 
 /* Takes the questions from the API, loops through them and showQuestion to display the question and answers. */
     await getQuestionFromAPI();
-    renderNewQuestion();
     showQuestion();
 
 }
@@ -114,7 +105,7 @@ async function startGeneralKnowledge () {
 /* function the same as startGeneralKnowledge above, but changes and targets slightly different due to the chosen category being History. */
 
 async function startHistory () {
-    backgroundContainer.classList.remove('body-background');
+    backgroundContainer.classList.remove('body-background-main');
     backgroundContainer.classList.add('body-background-history');
 
     questionCategory.innerText = "History";
@@ -124,14 +115,13 @@ async function startHistory () {
     scoreText.innerText = score;
     questionCounter = 0;
     await getQuestionFromAPIHistory();
-    renderNewQuestion();
     showQuestion();
 }
 
 /* function the same as startGeneralKnowledge above, but changes and targets slightly different due to the chosen category being Sports. */
 
 async function startSports () {
-    backgroundContainer.classList.remove('body-background');
+    backgroundContainer.classList.remove('body-background-main');
     backgroundContainer.classList.add('body-background-sports');
 
     questionCategory.innerText = "Sports";
@@ -141,14 +131,13 @@ async function startSports () {
     scoreText.innerText = score;
     questionCounter = 0;
     await getQuestionFromAPISports();
-    renderNewQuestion();
     showQuestion();
 }
 
 /* function the same as startGeneralKnowledge above, but changes and targets slightly different due to the chosen category being Food & Drink. */
 
 async function startFoodAndDrink () {
-    backgroundContainer.classList.remove('body-background');
+    backgroundContainer.classList.remove('body-background-main');
     backgroundContainer.classList.add('body-background-food-and-drink');
 
     questionCategory.innerText = "Food & Drink";
@@ -158,7 +147,6 @@ async function startFoodAndDrink () {
     scoreText.innerText = score;
     questionCounter = 0;
     await getQuestionFromAPIFoodAndDrink();
-    renderNewQuestion();
     showQuestion();
 }
 
@@ -296,7 +284,7 @@ function restartGame () {
     backgroundContainer.classList.remove('body-background-history');
     backgroundContainer.classList.remove('body-background-sports');
     backgroundContainer.classList.remove('body-background-food-and-drink');
-    backgroundContainer.classList.add('body-background');
+    backgroundContainer.classList.add('body-background-main');
     gameArea.classList.remove('hide');
 
 /* decreases the max height of the game area back to the orginal 60%, which was changed when the user reached the endScreen. */

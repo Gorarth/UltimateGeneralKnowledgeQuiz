@@ -26,7 +26,7 @@ This is a website designed for people to test there general knowledge. It has be
     - [User Story Testing](#user-story-testing)
     - [Manual Testing](#manual-testing)
     - [Validator Testing](#validator-testing)
-    - [Solved Bugs](#solved-bugs)
+    - [Solved Bugs](#solved-bugs-and-issues)
     - [Known Bugs](#known-bugs)
     - [Lighthouse Tests](#lighthouse)
 - [Credits](#credits)
@@ -45,11 +45,10 @@ Ultimate General Knowledge Quiz is an online website, focused on using JavaScrip
 
 ## User Stories
 
-- First time visistors will be able to easily navigate the page with a simple format and click the desired category and play the quiz.
+- First time vistors will be able to easily navigate the page with a simple format and click the desired category and play the quiz.
 
-- Returning visitors will be able to choose different categorys of questions which are more specific then general knowledge.
+- Returning visitors will be able to choose different categories of questions which are more specific then general knowledge.
 
-- Frequent users will want to be able to keep track of there highscores and challenge themselves to do better each time they come to the quiz.
 
 [Back to Contents](#contents)
 - - - 
@@ -140,7 +139,7 @@ Ultimate General Knowledge Quiz is an online website, focused on using JavaScrip
 
 1. #### Highscores
 
-    - I could implement a highscore feature, which could either save to the users device or a global scale. This option could also compare scores among friends if a feature for creating an account was added, see below.
+    - The website could have a highscore feature, which could either save to the users device or a global scale. This option could also compare scores among friends if a feature for creating an account was added, see below.
 
     - Adding in a timer, to see who completes the quiz in the fastest time would be a second way to see who is top dog. Who can get all 10 right the fastest?
 
@@ -221,13 +220,11 @@ All HTML, CSS and JavaScript has been passed through a validator with no signifi
 
 - [CSS](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fgorarth.github.io%2FUltimateGeneralKnowledgeQuiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
-- JavaScript
+- JavaScript code was ran through JSHint and returned no errors. These warnings are due to it not allowing for use of esversion 8
+
+![JSHint](assets/images/JSHint.png)
 
 ## Solved Bugs and Issues
-
-- When i coded in the API, I noticed that the API wasn't gathering the questions and answers into an array within the variable i had put. This was happening due to me not calling the function to work.
-
-![First bug](assets/images/bug1.png)
 
 - When i first put in the background images, i tried to change them through the JavaScript, so when it was clicked the JavaScript would active another function to change the image. This didn't work and i changed to the simpler method of doing it within the CSS and puting in the JavaScript functions classList.add() to change the background image.
 
