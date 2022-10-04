@@ -183,13 +183,43 @@ Forking the GitHub repository:
 
 # Testing
 
+Throughout building this project, I tested everytime i added something new. I used the google dev tools for "score" and "console" a lot. This really helped with the building process and to further expand my knowledge of JavaScript and how everything worked.
 
 ## User Story testing
 
+- First time user testing; Easy to navigate and understand the purpose of the webpage. They understand through the short disciption that click on the category, will start the quiz.
+
+- Returning users; They have multiple categorys in which they can pick from, as well as the questions constantly changing through the API.
+
+- Frequent users; They will want more features added in, this will be achieved by implementing the proposed future features, with the likes of highscores and special modes.
 
 ## Manual Testing
 
+I have manually tested the webpage on a number of different mobile devices using the google chrome developer tools to make sure they where responsive.
+
+- iPhone 13 Pro
+- iPhone 12 Pro
+- Pixel 5
+- iPhone 8 Plus
+- MacBook Pro 13"
+- Samsung Galaxy S20 Ultra
+- iPad Air
+- iPad Mini
+- Surface Pro 7
+- Samsung Galaxy A51/71
+
+I also tested the webpage on some browsers
+
+- Google Chrome
+- Microsoft Edge
+
 ## Validator Testing
+
+All HTML, CSS and JavaScript has been passed through a validator with no significant issues.
+
+- [Index HTML](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgorarth.github.io%2FUltimateGeneralKnowledgeQuiz%2F)
+
+- [CSS](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fgorarth.github.io%2FUltimateGeneralKnowledgeQuiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 ## Solved Bugs and Issues
 
