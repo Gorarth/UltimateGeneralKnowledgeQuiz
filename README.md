@@ -221,26 +221,46 @@ All HTML, CSS and JavaScript has been passed through a validator with no signifi
 
 - [CSS](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fgorarth.github.io%2FUltimateGeneralKnowledgeQuiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
+- JavaScript
+
 ## Solved Bugs and Issues
 
+- When i coded in the API, I noticed that the API wasn't gathering the questions and answers into an array within the variable i had put. This was happening due to me not calling the function to work.
+
+![First bug](assets/images/bug1.png)
+
+- When i first put in the background images, i tried to change them through the JavaScript, so when it was clicked the JavaScript would active another function to change the image. This didn't work and i changed to the simpler method of doing it within the CSS and puting in the JavaScript functions classList.add() to change the background image.
+
+- Due to having a hover effect on the buttons, When using a mobile device, once the user had pressed the answer they wanted, the question and answers would change, but the hover effect would roll over to the next question.
+
+![Third bug](assets/images/bug3.png)
+
 ## Known Bugs
+
+- Depending on the screensize and the question size, The Answers may overhang off the game area. This could be fixxed by increasing the Game area size, however this happened very little and rather than having lots of empty space, i opted to have it overhang on that odd occasion.
+
+![Second bug](assets/images/bug2.png)
 
 [Back to Contents](#contents)
 - - - 
 
 ## Lighthouse
 
+Using Lighthouse found within google chromes developer tools, i tested the performance, accessibilty, best practices and SEO of the website.
+
+- The first photo is of the desktop version
+- The second photo is of the mobile version
+
+![Lighthouse scores](assets/images/lighthouse.png)
 
 [Back to Contents](#contents)
  - - -
 
  ## Credits
 
-Content for the website was written by myself, Chris English.
+[The Trivia API](https://the-trivia-api.com/) Was used to gather all the questions for each category.
 
-6 photos was used from free media sites
-
-[pxhere](https://pxhere.com)
+[pxhere](https://pxhere.com) Was used for all images.
  
 
 [Back to Contents](#contents)
@@ -251,3 +271,6 @@ Content for the website was written by myself, Chris English.
 I'd like to thank the people who have helped and assited me on completing my firt project.
 
 - Narender, My mentor
+- Kera Cudmore, for helping with the use of JSHint
+- Grace McKenna, for helping point out some bugs.
+- SuzyBee, for helping with the background image change, and giving the idea to do it in CSS rather than JS
