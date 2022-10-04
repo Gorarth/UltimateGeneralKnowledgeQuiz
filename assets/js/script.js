@@ -4,7 +4,7 @@ const gameArea = document.getElementById('game-area');
 const mainPage = document.getElementById('main-page');
 const generalKnowledge = document.getElementById('general-knowledge');
 const sports = document.getElementById('sports');
-const history = document.getElementById('history');
+const historyButton = document.getElementById('history');
 const questionArea = document.getElementById('question-area');
 const questionCategory = document.getElementById('question-category');
 const questionText = document.getElementById('question-text');
@@ -28,7 +28,7 @@ let availableQuestions = [];
 /* Add event listeners to the targetted buttons to start a function when clicked. */
 
 generalKnowledge.addEventListener('click', startGeneralKnowledge);
-history.addEventListener('click', startHistory);
+historyButton.addEventListener('click', startHistory);
 sports.addEventListener('click', startSports);
 foodAndDrink.addEventListener('click', startFoodAndDrink);
 restart.addEventListener('click', restartGame);
