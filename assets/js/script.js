@@ -8,7 +8,6 @@ const history = document.getElementById('history');
 const questionArea = document.getElementById('question-area');
 const questionCategory = document.getElementById('question-category');
 const questionText = document.getElementById('question-text');
-const answerButtons = document.getElementById('answer-buttons');
 const endScreen = document.getElementById('end-screen');
 const choice1 = document.getElementById('choice1');
 const choice2 = document.getElementById('choice2');
@@ -23,7 +22,6 @@ const backgroundContainer = document.getElementById('background-container');
 
 let scoreText = document.getElementById('score-text');
 let scoreTextEndScreen = document.getElementById('score-text-end-screen');
-let currentQuestion = {};
 let questionCounter = 0;
 let availableQuestions = [];
 
@@ -166,7 +164,7 @@ async function startFoodAndDrink () {
 
 /* Sets score to 0. */
 
-score = 0;
+let score = 0;
 
 /* Main game function. */
 
